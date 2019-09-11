@@ -29,7 +29,7 @@
 		  <div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item mx-0 mx-lg-1">
-				<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#matches">Matches</a>
+				<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#matches">Fixtures</a>
 			  </li>
 			  <li class="nav-item mx-0 mx-lg-1">
 				<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#gallery">Gallery</a>
@@ -78,9 +78,10 @@
 	  <!-- Portfolio Section -->
 	  <section class="page-section portfolio" id="matches">
 		<div class="container">
+		
 
 		  <!-- Portfolio Section Heading -->
-		  <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">matches</h2>
+		  <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Fixtures</h2>
 
 		  <!-- Icon Divider -->
 		  <div class="divider-custom">
@@ -91,47 +92,72 @@
 			<div class="divider-custom-line"></div>
 		  </div>
 
-		  <!-- Portfolio Grid Items -->
-		  <div class="row">
+			  <style>
+				table {
+				  font-family: arial, sans-serif;
+				  border-collapse: collapse;
+				  width: 100%;
+				}
 
-			<!-- Portfolio Item 1 -->
-			<div class="col-md-6 col-lg-4">
-			  <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-				<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-				  <div class="portfolio-item-caption-content text-center text-white">
-					<i class="fas fa-plus fa-3x"></i>
-				  </div>
-				</div>
-				<img class="img-fluid" src="img/portfolio/football-fixtures.jpg" alt="">
-			  </div>
-			</div>
+				td, th {
+				  border: 1px solid #dddddd;
+				  text-align: left;
+				  padding: 8px;
+				}
 
-			<!-- Portfolio Item 2 -->
-			<div class="col-md-6 col-lg-4">
-			  <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-				<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-				  <div class="portfolio-item-caption-content text-center text-white">
-					<i class="fas fa-plus fa-3x"></i>
-				  </div>
-				</div>
-				<img class="img-fluid" src="img/portfolio/full-time.jpg" alt="">
-			  </div>
-			</div>
-
-			<!-- Portfolio Item 3 -->
-			<div class="col-md-6 col-lg-4">
-			  <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-				<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-				  <div class="portfolio-item-caption-content text-center text-white">
-					<i class="fas fa-plus fa-3x"></i>
-				  </div>
-				</div>
-				<img class="img-fluid" src="img/portfolio/table.jpg" alt="">
-			  </div>
-			</div>
-
-		  </div>
-		  <!-- /.row -->
+				tr:nth-child(even) {
+				  background-color: #dddddd;
+				}
+			  </style>
+			<br>
+			
+			<table>
+			  <tr>
+				<th>Home Team</th>
+				<th>Home Score</th>
+				<th>-</th>
+				<th>Away Score</th>
+				<th>Away Team</th>
+				<th>Date</th>
+				<th>Address</th>
+			  </tr>
+			  <tr>
+				<td>Milton & Fulston</td>
+				<td>1</td>
+				<td>-</td>
+				<td>9</td>
+				<td>Hempstead Valley</td>
+				<td>08/09/2019</td>
+				<td>Cromer's Corner Sports Ground, ME10 4HS</td>
+			  </tr>
+			  <tr>
+				<td>Hempstead Valley</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>Bredhurst Juniors</td>
+				<td>15/09/2019</td>
+				<td>Hempstead Rec, ME7 3SA</td>
+			  </tr>
+			  <tr>
+				<td>Hempstead Valley</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>Team 3</td>
+				<td>22/09/2019</td>
+				<td>Hempstead Rec, ME7 3SA</td>
+			  </tr>
+			  <tr>
+				<td>Team 4</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>Hempstead Valley</td>
+				<td>08/09/2019</td>
+				<td>Somewhere Else, ABC 123</td>
+			  </tr>
+			</table>
 
 		</div>
 	  </section>
@@ -356,7 +382,7 @@
 	  <!-- Copyright Section -->
 	  <section class="copyright py-4 text-center text-white">
 		<div class="container">
-		  <small>Copyright &copy; HVU7</small>
+		  <small>Copyright &copy; Tony Meade 2019</small>
 		</div>
 	  </section>
 
@@ -367,124 +393,6 @@
 		</a>
 	  </div>
 
-	  <!-- Portfolio Modals -->
-
-	  <!-- Portfolio Modal 1 -->
-	  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-		<div class="modal-dialog modal-xl" role="document">
-		  <div class="modal-content">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			  <span aria-hidden="true">
-				<i class="fas fa-times"></i>
-			  </span>
-			</button>
-			<div class="modal-body text-center">
-			  <div class="container">
-				<div class="row justify-content-center">
-				  <div class="col-lg-8">
-					<!-- Portfolio Modal - Title -->
-					<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Fixtures</h2>
-					<!-- Icon Divider -->
-					<div class="divider-custom">
-					  <div class="divider-custom-line"></div>
-					  <div class="divider-custom-icon">
-						<i class="fas fa-futbol"></i>
-					  </div>
-					  <div class="divider-custom-line"></div>
-					</div>
-					<!-- Portfolio Modal - Image -->
-					<img class="img-fluid rounded mb-5" src="img/portfolio/football-fixtures.jpg" alt="">
-					<!-- Portfolio Modal - Text -->
-					<p class="mb-5">Here you can see the upcoming fixtures.</p>
-					<button class="btn btn-primary" href="#" data-dismiss="modal">
-					  <i class="fas fa-times fa-fw"></i>
-					  Close Window
-					</button>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-
-	  <!-- Portfolio Modal 2 -->
-	  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
-		<div class="modal-dialog modal-xl" role="document">
-		  <div class="modal-content">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			  <span aria-hidden="true">
-				<i class="fas fa-times"></i>
-			  </span>
-			</button>
-			<div class="modal-body text-center">
-			  <div class="container">
-				<div class="row justify-content-center">
-				  <div class="col-lg-8">
-					<!-- Portfolio Modal - Title -->
-					<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Results</h2>
-					<!-- Icon Divider -->
-					<div class="divider-custom">
-					  <div class="divider-custom-line"></div>
-					  <div class="divider-custom-icon">
-						<i class="fas fa-futbol"></i>
-					  </div>
-					  <div class="divider-custom-line"></div>
-					</div>
-					<!-- Portfolio Modal - Image -->
-					<img class="img-fluid rounded mb-5" src="img/portfolio/full-time.jpg" alt="">
-					<!-- Portfolio Modal - Text -->
-					<p class="mb-5">Here you can see the latest results.</p>
-					<button class="btn btn-primary" href="#" data-dismiss="modal">
-					  <i class="fas fa-times fa-fw"></i>
-					  Close Window
-					</button>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-
-	  <!-- Portfolio Modal 3 -->
-	  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
-		<div class="modal-dialog modal-xl" role="document">
-		  <div class="modal-content">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			  <span aria-hidden="true">
-				<i class="fas fa-times"></i>
-			  </span>
-			</button>
-			<div class="modal-body text-center">
-			  <div class="container">
-				<div class="row justify-content-center">
-				  <div class="col-lg-8">
-					<!-- Portfolio Modal - Title -->
-					<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">League Table</h2>
-					<!-- Icon Divider -->
-					<div class="divider-custom">
-					  <div class="divider-custom-line"></div>
-					  <div class="divider-custom-icon">
-						<i class="fas fa-futbol"></i>
-					  </div>
-					  <div class="divider-custom-line"></div>
-					</div>
-					<!-- Portfolio Modal - Image -->
-					<img class="img-fluid rounded mb-5" src="img/portfolio/table.jpg" alt="">
-					<!-- Portfolio Modal - Text -->
-					<p class="mb-5">Here is a link to the league table</p>
-					<button class="btn btn-primary" href="#" data-dismiss="modal">
-					  <i class="fas fa-times fa-fw"></i>
-					  Close Window
-					</button>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
 	  
 
 	  <!-- Bootstrap core JavaScript -->
