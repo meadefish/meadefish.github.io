@@ -91,7 +91,20 @@
 			<div class="divider-custom-line"></div>
 		  </div>
 
-			  <style>
+			<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script>
+				$(document).ready(function(){
+				  $("#myInput").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#myTable tr").filter(function() {
+					  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+					});
+				  });
+				});
+			</script>
+					  
+			<style>
 				table {
 				  font-family: arial, sans-serif;
 				  border-collapse: collapse;
@@ -108,12 +121,18 @@
 				tr:nth-child(even) {
 				  background-color: #dddddd;
 				}
-			  </style>
+			</style>
+			</head>
 			<br>
 			
+			<body>
+			<h3>Search competition or team here...</h3>
+			<input id="myInput" type="text" placeholder="Search..">
+			<br><br>
 			
 			<div style="overflow-x:auto;">
 			<table>
+			  <thead>
 			  <tr>
 				<th>Comp</th>
 				<th>Home Team</th>
@@ -124,6 +143,8 @@
 				<th>Date</th>
 				<th>Address</th>
 			  </tr>
+			  </thead>
+			  <tbody id="myTable">
 			  <tr>
 				<td>League</td>
 				<td>Milton & Fulston</td>
@@ -284,6 +305,7 @@
 				<td>05/01/2020</td>
 				<td>Hempstead Rec, ME7 3SA</td>
 			  </tr>
+			  </tbody>
 			</table>
 			</div>
 
