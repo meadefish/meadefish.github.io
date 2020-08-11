@@ -32,6 +32,9 @@
 				<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#matches">Fixtures</a>
 			  </li>
 			  <li class="nav-item mx-0 mx-lg-1">
+				<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#squad">Squad</a>
+			  </li>
+			  <li class="nav-item mx-0 mx-lg-1">
 				<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#gallery">Gallery</a>
 			  </li>
 			  <li class="nav-item mx-0 mx-lg-1">
@@ -53,10 +56,10 @@
 		<div class="container d-flex align-items-center flex-column">
 
 		  <!-- Masthead Avatar Image -->
-		  <img class="masthead-avatar mb-5" src="img/badge.png" alt="">
+		  <img class="masthead-avatar mb-5" src="img/new_badge.png" alt="">
 
 		  <!-- Masthead Heading -->
-		  <h1 class="masthead-heading text-uppercase mb-0">Hempstead Valley Under 7's</h1>
+		  <h1 class="masthead-heading text-uppercase mb-0">Hempstead Valley Rangers Under 9's</h1>
 
 		  <!-- Icon Divider -->
 		  <div class="divider-custom divider-light">
@@ -68,7 +71,7 @@
 		  </div>
 
 		  <!-- Masthead Subheading -->
-		  <p class="masthead-subheading font-weight-light mb-0">Welcome to the home of Hempstead Valley under 7's. We are currently playing in the Medway Messenger Youth League.</p>
+		  <p class="masthead-subheading font-weight-light mb-0">Welcome to the home of Hempstead Valley Rangers. We are currently playing in the Medway Messenger Youth League at Under 9's.</p>
 		  <p class="masthead-subheading font-weight-light mb-0">Below you can see our latest results, upcoming fixtures, as well as a gallery of images from recent games!</p>
 
 		</div>
@@ -103,7 +106,41 @@
 				  });
 				});
 			</script>
-					  
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script>
+				$(document).ready(function(){
+				  $("#myInput2").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#myTable2 tr").filter(function() {
+					  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+					});
+				  });
+				});
+			</script>
+			
+			<script>
+				function openCity(evt, cityName) {
+				  // Declare all variables
+				  var i, tabcontent, tablinks;
+
+				  // Get all elements with class="tabcontent" and hide them
+				  tabcontent = document.getElementsByClassName("tabcontent");
+				  for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+					  }
+
+					  // Get all elements with class="tablinks" and remove the class "active"
+					  tablinks = document.getElementsByClassName("tablinks");
+					  for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].className = tablinks[i].className.replace(" active", "");
+					  }
+
+					  // Show the current tab, and add an "active" class to the button that opened the tab
+					  document.getElementById(cityName).style.display = "block";
+					  evt.currentTarget.className += " active";
+					}
+			</script>
+			
 			<style>
 				table {
 				  font-family: arial, sans-serif;
@@ -122,295 +159,458 @@
 				  background-color: #dddddd;
 				}
 			</style>
+			
+			<!-- Tab links -->
+			<div class="tab">
+			  <button class="tablinks" onclick="openCity(event, '1920')">2019/2020</button>
+			  <button class="tablinks" onclick="openCity(event, '2021')">2020/2021</button>
+			</div>
+
+			<!-- Tab content -->
+			<div id="1920" class="tabcontent">
+				<h3>2019/2020 Season</h3>
+				
+					<body>
+					<h3>Search competition or team here...</h3>
+					<input id="myInput" type="text" placeholder="Search..">
+					<br><br>
+					<div style="height:292px;overflow-y:scroll;">
+					<table>
+					  <thead>
+					  <tr>
+						<th>Comp</th>
+						<th>Home Team</th>
+						<th>Home Score</th>
+						<th>-</th>
+						<th>Away Score</th>
+						<th>Away Team</th>
+						<th>Date</th>
+						<th>Address</th>
+					  </tr>
+					  </thead>
+					  <tbody id="myTable">
+					  <tr>
+						<td>League</td>
+						<td>Milton & Fulston</td>
+						<td align="center">1</td>
+						<td>-</td>
+						<td align="center">11</td>
+						<td>Hempstead Valley</td>
+						<td>08/09/2019</td>
+						<td><a href="https://www.google.com/maps/place/Cromers+Corner/@51.324528,0.7274553,17z/data=!3m1!4b1!4m5!3m4!1s0x47df2abfebf6b721:0xa6240a873697008c!8m2!3d51.324528!4d0.729644">Cromers Corner Sports Ground, ME10 4HS</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Hempstead Valley</td>
+						<td align="center">16</td>
+						<td>-</td>
+						<td align="center">0</td>
+						<td>Bredhurst Juniors</td>
+						<td>15/09/2019</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Wigmore Youth</td>
+						<td align="center">1</td>
+						<td>-</td>
+						<td align="center">9</td>
+						<td>Hempstead Valley</td>
+						<td>22/09/2019</td>
+						<td><a href="https://www.google.com/maps/place/Fairview+Community+Primary+School/@51.3489702,0.5866083,17z/data=!4m8!1m2!2m1!1sFairview+School,+ME8+0NU!3m4!1s0x47d8d2b5890ffe45:0xfdd4964049594b81!8m2!3d51.3478836!4d0.587079">Fairview School, ME8 0NU</a></td>
+					  </tr>
+					  <tr>
+						<td>Friendly</td>
+						<td>Hollands & Blair</td>
+						<td align="center">1</td>
+						<td>-</td>
+						<td align="center">8</td>
+						<td>Hempstead Valley</td>
+						<td>28/09/2019</td>
+						<td><a href="https://www.google.com/maps/place/Brompton+Academy/@51.3839498,0.5377803,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8cd74b1f3fb87:0xffcee4f06a49ea7a!8m2!3d51.3839498!4d0.539969">Brompton Academy, ME7 5HT</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Hempstead Valley</td>
+						<td align="center">11</td>
+						<td>-</td>
+						<td align="center">3</td>
+						<td>Sheerness East Youth</td>
+						<td>06/10/2019</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Rainham Eagles</td>
+						<td align="center">0</td>
+						<td>-</td>
+						<td align="center">18</td>
+						<td>Hempstead Valley</td>
+						<td>13/10/2019</td>
+						<td><a href="https://www.google.com/maps/place/120+Cornwallis+Ave,+Gillingham+ME7+2DL/@51.3805145,0.5712925,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d285bb0a2adb:0x8e5cb8eedc95ec08!8m2!3d51.3805145!4d0.5734812">Esabs Fields, ME7 2DH</a></td>
+					  </tr>
+					  <tr>
+						<td>Friendly</td>
+						<td>Gillingham FC</td>
+						<td align="center">5</td>
+						<td>-</td>
+						<td align="center">2</td>
+						<td>Hempstead Valley</td>
+						<td>14/10/2019</td>
+						<td><a href="https://www.google.com/maps/place/The+Sittingbourne+School/@51.3335746,0.7561555,18z/data=!4m5!3m4!1s0x47ded559dbd7610f:0xb37c5916b708c469!8m2!3d51.3338194!4d0.7563447">Swale Community College, ME10 4NL</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Lordswood FC</td>
+						<td align="center">0</td>
+						<td>-</td>
+						<td align="center">10</td>
+						<td>Hempstead Valley</td>
+						<td>03/11/2019</td>
+						<td><a href="https://www.google.com/maps/place/Lordswood+Sports+And+Social+Club/@51.3394863,0.544477,17z/data=!4m13!1m7!3m6!1s0x47d8cd4ec134549f:0x2f2654e0965685b8!2sN+Dane+Way,+Chatham+ME5+8YE!3b1!8m2!3d51.3394863!4d0.5466657!3m4!1s0x0:0xcb0edbef3e0e7a6d!8m2!3d51.3405265!4d0.5452622">Lordswood FC, North Dane Way, ME5 8YE</a></td>
+					  </tr>
+					  <tr>
+						<td>Cup</td>
+						<td>Rochester City</td>
+						<td align="center">0</td>
+						<td>-</td>
+						<td align="center">5</td>
+						<td>Hempstead Valley</td>
+						<td>10/11/2019</td>
+						<td><a href="https://www.google.com/maps/place/The+Victory+Academy/@51.3676352,0.5294368,17z/data=!4m5!3m4!1s0x47d8cd2201c7fe3f:0xc056cc5d3369bcd1!8m2!3d51.3675297!4d0.5308209">Victory Academy, ME4 5JB</a></td>
+					  </tr>
+					  <tr>
+						<td>Cup</td>
+						<td>Real 60</td>
+						<td align="center">0</td>
+						<td>-</td>
+						<td align="center">5</td>
+						<td>Hempstead Valley</td>
+						<td>10/11/2019</td>
+						<td><a href="https://www.google.com/maps/place/The+Victory+Academy/@51.3676352,0.5294368,17z/data=!4m5!3m4!1s0x47d8cd2201c7fe3f:0xc056cc5d3369bcd1!8m2!3d51.3675297!4d0.5308209">Victory Academy, ME4 5JB</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Hempstead Valley</td>
+						<td align="center">7</td>
+						<td>-</td>
+						<td align="center">1</td>
+						<td>Woodcombe Youth</td>
+						<td>17/11/2019</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Rochester City</td>
+						<td align="center">1</td>
+						<td>-</td>
+						<td align="center">14</td>
+						<td>Hempstead Valley</td>
+						<td>24/11/2019</td>
+						<td><a href="https://www.google.com/maps/place/The+Victory+Academy/@51.3676352,0.5294368,17z/data=!4m5!3m4!1s0x47d8cd2201c7fe3f:0xc056cc5d3369bcd1!8m2!3d51.3675297!4d0.5308209">Victory Academy, ME4 5JB</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Hempstead Valley</td>
+						<td align="center">8</td>
+						<td>-</td>
+						<td align="center">1</td>
+						<td>Medway United</td>
+						<td>01/12/2019</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Hempstead Valley</td>
+						<td align="center">9</td>
+						<td>-</td>
+						<td align="center">1</td>
+						<td>Medway Town</td>
+						<td>08/12/2019</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Wigmore Youth</td>
+						<td align="center">0</td>
+						<td>-</td>
+						<td align="center">7</td>
+						<td>Hempstead Valley</td>
+						<td>15/12/2019</td>
+						<td><a href="https://www.google.com/maps/place/Fairview+Community+Primary+School/@51.3489702,0.5866083,17z/data=!4m8!1m2!2m1!1sFairview+School,+ME8+0NU!3m4!1s0x47d8d2b5890ffe45:0xfdd4964049594b81!8m2!3d51.3478836!4d0.587079">Fairview School, ME8 0NU</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Hempstead Valley</td>
+						<td align="center">8</td>
+						<td>-</td>
+						<td align="center">0</td>
+						<td>Real 60 Youth</td>
+						<td>05/01/2020</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Hempstead Valley</td>
+						<td align="center">6</td>
+						<td>-</td>
+						<td align="center">3</td>
+						<td>Cuxton 91 Wanderers</td>
+						<td>12/01/2020</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Medway Town</td>
+						<td align="center">0</td>
+						<td>-</td>
+						<td align="center">8</td>
+						<td>Hempstead Valley</td>
+						<td>19/01/2020</td>
+						<td><a href="https://www.google.com/maps/place/Rainham+Mark+Grammar+School/@51.3702123,0.5957074,15z/data=!4m5!3m4!1s0x0:0xd9f5b3b084166983!8m2!3d51.3702123!4d0.5957074">Rainham Mark School, ME8 7AJ</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Woodcombe Youth</td>
+						<td align="center">0</td>
+						<td>-</td>
+						<td align="center">6</td>
+						<td>Hempstead Valley</td>
+						<td>26/01/2020</td>
+						<td><a href="https://www.google.com/maps/place/97-95+Church+Rd,+Sittingbourne+ME10+3AR/@51.3465706,0.7530816,17z/data=!3m1!4b1!4m5!3m4!1s0x47d92aab0333e989:0x6e5e9d8144029c91!8m2!3d51.3465706!4d0.7552703">Murston Park, ME10 3RT</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Hempstead Valley</td>
+						<td align="center">5</td>
+						<td>-</td>
+						<td align="center">1</td>
+						<td>Sheerness East Youth</td>
+						<td>02/02/2020</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Hempstead Valley</td>
+						<td align="center">10</td>
+						<td>-</td>
+						<td align="center">0</td>
+						<td>Real 60 Jaguars</td>
+						<td>23/02/2020</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  <tr>
+						<td>League</td>
+						<td>Medway United South</td>
+						<td align="center">1</td>
+						<td>-</td>
+						<td align="center">1</td>
+						<td>Hempstead Valley</td>
+						<td>08/03/2020</td>
+						<td><a href="https://www.google.com/maps/place/The+Howard+School/@51.3633708,0.5929702,15z/data=!4m5!3m4!1s0x0:0xa618258e5bbe8a4e!8m2!3d51.3633708!4d0.5929702">Howard School, ME8 0BX</a></td>
+					  </tr>
+					  <tr>
+						<td>Cup</td>
+						<td>Hempstead Valley</td>
+						<td align="center">3</td>
+						<td>-</td>
+						<td align="center">2</td>
+						<td>Woodcombe Youth</td>
+						<td>15/03/2020</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  <tr>
+						<td>Cup</td>
+						<td>Hempstead Valley</td>
+						<td align="center">7</td>
+						<td>-</td>
+						<td align="center">1</td>
+						<td>Cuxton 91 Wanderers</td>
+						<td>15/03/2020</td>
+						<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
+					  </tr>
+					  </tbody>
+					</table>
+					</div>
+			
+			  
+			  
+			  
+			</div>
+
+			<div id="2021" class="tabcontent">
+			  <h3>2020/2021 Season</h3>
+			  
+
+					<h3>Search competition or team here...</h3>
+					<input id="myInput2" type="text" placeholder="Search..">
+					<br><br>
+					<div style="height:292px;overflow-y:scroll;">
+					<table>
+					  <thead>
+					  <tr>
+						<th>Comp</th>
+						<th>Home Team</th>
+						<th>Home Score</th>
+						<th>-</th>
+						<th>Away Score</th>
+						<th>Away Team</th>
+						<th>Date</th>
+						<th>Address</th>
+					  </tr>
+					  </thead>
+					  <tbody id="myTable2">
+						  <tr>
+							<td>Friendly</td>
+							<td>Hempstead Valley</td>
+							<td align="center">1</td>
+							<td>-</td>
+							<td align="center">5</td>
+							<td>Hempstead Valley Rangers</td>
+							<td>09/08/2020</td>
+							<td><a href="https://www.google.com/maps/place/Star+Meadow+Sports+Club/@51.3712758,0.5616301,15z/data=!4m2!3m1!1s0x0:0x26e8b7befc89d599?sa=X&ved=2ahUKEwjX6pOap5PrAhVYXRUIHUEUDawQ_BIwCnoECBQQCA">Star Meadow, ME7 2AA</a></td>
+						  </tr>
+						  <tr>
+							<td>Friendly</td>
+							<td>Herne Bay</td>
+							<td align="center">-</td>
+							<td>-</td>
+							<td align="center">-</td>
+							<td>Hempstead Valley Rangers</td>
+							<td>29/08/2020</td>
+							<td><a href="https://www.google.com/maps/place/Gallagher+Stadium/@51.2798253,0.5141204,17z/data=!3m1!4b1!4m5!3m4!1s0x47df32348d5a21fb:0xd89270bad32b2f90!8m2!3d51.279822!4d0.5163091">Gallagher Stadium, ME14 1LQ</a></td>
+						  </tr>
+						  <tr>
+							<td>Friendly</td>
+							<td>Maidstone Utd</td>
+							<td align="center">-</td>
+							<td>-</td>
+							<td align="center">-</td>
+							<td>Hempstead Valley Rangers</td>
+							<td>29/08/2020</td>
+							<td><a href="https://www.google.com/maps/place/Gallagher+Stadium/@51.2798253,0.5141204,17z/data=!3m1!4b1!4m5!3m4!1s0x47df32348d5a21fb:0xd89270bad32b2f90!8m2!3d51.279822!4d0.5163091">Gallagher Stadium, ME14 1LQ</a></td>
+						  </tr>
+					  </tbody>
+					</table>
+			</div>
 			</head>
 			<br>
+	
 			
-			<body>
-			<h3>Search competition or team here...</h3>
-			<input id="myInput" type="text" placeholder="Search..">
-			<br><br>
-			
-			<div style="height:292px;overflow-y:scroll;">
-			<table>
-			  <thead>
-			  <tr>
-				<th>Comp</th>
-				<th>Home Team</th>
-				<th>Home Score</th>
-				<th>-</th>
-				<th>Away Score</th>
-				<th>Away Team</th>
-				<th>Date</th>
-				<th>Address</th>
-			  </tr>
-			  </thead>
-			  <tbody id="myTable">
-			  <tr>
-				<td>League</td>
-				<td>Milton & Fulston</td>
-				<td align="center">1</td>
-				<td>-</td>
-				<td align="center">11</td>
-				<td>Hempstead Valley</td>
-				<td>08/09/2019</td>
-				<td><a href="https://www.google.com/maps/place/Cromers+Corner/@51.324528,0.7274553,17z/data=!3m1!4b1!4m5!3m4!1s0x47df2abfebf6b721:0xa6240a873697008c!8m2!3d51.324528!4d0.729644">Cromers Corner Sports Ground, ME10 4HS</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Hempstead Valley</td>
-				<td align="center">16</td>
-				<td>-</td>
-				<td align="center">0</td>
-				<td>Bredhurst Juniors</td>
-				<td>15/09/2019</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Wigmore Youth</td>
-				<td align="center">1</td>
-				<td>-</td>
-				<td align="center">9</td>
-				<td>Hempstead Valley</td>
-				<td>22/09/2019</td>
-				<td><a href="https://www.google.com/maps/place/Fairview+Community+Primary+School/@51.3489702,0.5866083,17z/data=!4m8!1m2!2m1!1sFairview+School,+ME8+0NU!3m4!1s0x47d8d2b5890ffe45:0xfdd4964049594b81!8m2!3d51.3478836!4d0.587079">Fairview School, ME8 0NU</a></td>
-			  </tr>
-			  <tr>
-				<td>Friendly</td>
-				<td>Hollands & Blair</td>
-				<td align="center">1</td>
-				<td>-</td>
-				<td align="center">8</td>
-				<td>Hempstead Valley</td>
-				<td>28/09/2019</td>
-				<td><a href="https://www.google.com/maps/place/Brompton+Academy/@51.3839498,0.5377803,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8cd74b1f3fb87:0xffcee4f06a49ea7a!8m2!3d51.3839498!4d0.539969">Brompton Academy, ME7 5HT</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Hempstead Valley</td>
-				<td align="center">11</td>
-				<td>-</td>
-				<td align="center">3</td>
-				<td>Sheerness East Youth</td>
-				<td>06/10/2019</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Rainham Eagles</td>
-				<td align="center">0</td>
-				<td>-</td>
-				<td align="center">18</td>
-				<td>Hempstead Valley</td>
-				<td>13/10/2019</td>
-				<td><a href="https://www.google.com/maps/place/120+Cornwallis+Ave,+Gillingham+ME7+2DL/@51.3805145,0.5712925,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d285bb0a2adb:0x8e5cb8eedc95ec08!8m2!3d51.3805145!4d0.5734812">Esabs Fields, ME7 2DH</a></td>
-			  </tr>
-			  <tr>
-				<td>Friendly</td>
-				<td>Gillingham FC</td>
-				<td align="center">5</td>
-				<td>-</td>
-				<td align="center">2</td>
-				<td>Hempstead Valley</td>
-				<td>14/10/2019</td>
-				<td><a href="https://www.google.com/maps/place/The+Sittingbourne+School/@51.3335746,0.7561555,18z/data=!4m5!3m4!1s0x47ded559dbd7610f:0xb37c5916b708c469!8m2!3d51.3338194!4d0.7563447">Swale Community College, ME10 4NL</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Lordswood FC</td>
-				<td align="center">0</td>
-				<td>-</td>
-				<td align="center">10</td>
-				<td>Hempstead Valley</td>
-				<td>03/11/2019</td>
-				<td><a href="https://www.google.com/maps/place/Lordswood+Sports+And+Social+Club/@51.3394863,0.544477,17z/data=!4m13!1m7!3m6!1s0x47d8cd4ec134549f:0x2f2654e0965685b8!2sN+Dane+Way,+Chatham+ME5+8YE!3b1!8m2!3d51.3394863!4d0.5466657!3m4!1s0x0:0xcb0edbef3e0e7a6d!8m2!3d51.3405265!4d0.5452622">Lordswood FC, North Dane Way, ME5 8YE</a></td>
-			  </tr>
-			  <tr>
-				<td>Cup</td>
-				<td>Rochester City</td>
-				<td align="center">0</td>
-				<td>-</td>
-				<td align="center">5</td>
-				<td>Hempstead Valley</td>
-				<td>10/11/2019</td>
-				<td><a href="https://www.google.com/maps/place/The+Victory+Academy/@51.3676352,0.5294368,17z/data=!4m5!3m4!1s0x47d8cd2201c7fe3f:0xc056cc5d3369bcd1!8m2!3d51.3675297!4d0.5308209">Victory Academy, ME4 5JB</a></td>
-			  </tr>
-			  <tr>
-				<td>Cup</td>
-				<td>Real 60</td>
-				<td align="center">0</td>
-				<td>-</td>
-				<td align="center">5</td>
-				<td>Hempstead Valley</td>
-				<td>10/11/2019</td>
-				<td><a href="https://www.google.com/maps/place/The+Victory+Academy/@51.3676352,0.5294368,17z/data=!4m5!3m4!1s0x47d8cd2201c7fe3f:0xc056cc5d3369bcd1!8m2!3d51.3675297!4d0.5308209">Victory Academy, ME4 5JB</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Hempstead Valley</td>
-				<td align="center">7</td>
-				<td>-</td>
-				<td align="center">1</td>
-				<td>Woodcombe Youth</td>
-				<td>17/11/2019</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Rochester City</td>
-				<td align="center">1</td>
-				<td>-</td>
-				<td align="center">14</td>
-				<td>Hempstead Valley</td>
-				<td>24/11/2019</td>
-				<td><a href="https://www.google.com/maps/place/The+Victory+Academy/@51.3676352,0.5294368,17z/data=!4m5!3m4!1s0x47d8cd2201c7fe3f:0xc056cc5d3369bcd1!8m2!3d51.3675297!4d0.5308209">Victory Academy, ME4 5JB</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Hempstead Valley</td>
-				<td align="center">8</td>
-				<td>-</td>
-				<td align="center">1</td>
-				<td>Medway United</td>
-				<td>01/12/2019</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Hempstead Valley</td>
-				<td align="center">9</td>
-				<td>-</td>
-				<td align="center">1</td>
-				<td>Medway Town</td>
-				<td>08/12/2019</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Wigmore Youth</td>
-				<td align="center">0</td>
-				<td>-</td>
-				<td align="center">7</td>
-				<td>Hempstead Valley</td>
-				<td>15/12/2019</td>
-				<td><a href="https://www.google.com/maps/place/Fairview+Community+Primary+School/@51.3489702,0.5866083,17z/data=!4m8!1m2!2m1!1sFairview+School,+ME8+0NU!3m4!1s0x47d8d2b5890ffe45:0xfdd4964049594b81!8m2!3d51.3478836!4d0.587079">Fairview School, ME8 0NU</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Hempstead Valley</td>
-				<td align="center">8</td>
-				<td>-</td>
-				<td align="center">0</td>
-				<td>Real 60 Youth</td>
-				<td>05/01/2020</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Hempstead Valley</td>
-				<td align="center">6</td>
-				<td>-</td>
-				<td align="center">3</td>
-				<td>Cuxton 91 Wanderers</td>
-				<td>12/01/2020</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Medway Town</td>
-				<td align="center">0</td>
-				<td>-</td>
-				<td align="center">8</td>
-				<td>Hempstead Valley</td>
-				<td>19/01/2020</td>
-				<td><a href="https://www.google.com/maps/place/Rainham+Mark+Grammar+School/@51.3702123,0.5957074,15z/data=!4m5!3m4!1s0x0:0xd9f5b3b084166983!8m2!3d51.3702123!4d0.5957074">Rainham Mark School, ME8 7AJ</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Woodcombe Youth</td>
-				<td align="center">0</td>
-				<td>-</td>
-				<td align="center">6</td>
-				<td>Hempstead Valley</td>
-				<td>26/01/2020</td>
-				<td><a href="https://www.google.com/maps/place/97-95+Church+Rd,+Sittingbourne+ME10+3AR/@51.3465706,0.7530816,17z/data=!3m1!4b1!4m5!3m4!1s0x47d92aab0333e989:0x6e5e9d8144029c91!8m2!3d51.3465706!4d0.7552703">Murston Park, ME10 3RT</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Hempstead Valley</td>
-				<td align="center">5</td>
-				<td>-</td>
-				<td align="center">1</td>
-				<td>Sheerness East Youth</td>
-				<td>02/02/2020</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Hempstead Valley</td>
-				<td align="center">10</td>
-				<td>-</td>
-				<td align="center">0</td>
-				<td>Real 60 Jaguars</td>
-				<td>23/02/2020</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Medway United South</td>
-				<td align="center">1</td>
-				<td>-</td>
-				<td align="center">1</td>
-				<td>Hempstead Valley</td>
-				<td>08/03/2020</td>
-				<td><a href="https://www.google.com/maps/place/The+Howard+School/@51.3633708,0.5929702,15z/data=!4m5!3m4!1s0x0:0xa618258e5bbe8a4e!8m2!3d51.3633708!4d0.5929702">Howard School, ME8 0BX</a></td>
-			  </tr>
-			  <tr>
-				<td>Cup</td>
-				<td>Hempstead Valley</td>
-				<td align="center">3</td>
-				<td>-</td>
-				<td align="center">2</td>
-				<td>Woodcombe Youth</td>
-				<td>15/03/2020</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>Cup</td>
-				<td>Hempstead Valley</td>
-				<td align="center">7</td>
-				<td>-</td>
-				<td align="center">1</td>
-				<td>Cuxton 91 Wanderers</td>
-				<td>15/03/2020</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  <tr>
-				<td>Friendly</td>
-				<td>Hempstead Valley U8s</td>
-				<td align="center">-</td>
-				<td>-</td>
-				<td align="center">-</td>
-				<td>Hempstead Valley</td>
-				<td>21/03/2020</td>
-				<td><a href="https://www.google.com/maps/place/Miers+Court+Primary+School/@51.3563004,0.6076089,15z/data=!4m5!3m4!1s0x0:0x4b07b313b0529851!8m2!3d51.3563004!4d0.6076089">Mierscourt Road, ME8 8JR</a></td>
-			  </tr>
-			  <tr>
-				<td>League</td>
-				<td>Hempstead Valley</td>
-				<td align="center">-</td>
-				<td>-</td>
-				<td align="center">-</td>
-				<td>Wigmore Youth</td>
-				<td>29/03/2019</td>
-				<td><a href="https://www.google.com/maps/place/Hempstead+Park/@51.3540523,0.5694837,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8d2af199237e1:0xbcee818d325eb85e!8m2!3d51.3540523!4d0.5707851">Hempstead Rec, ME7 3SA</a></td>
-			  </tr>
-			  </tbody>
-			</table>
-			</div>
 
 		</div>
 	  </section>
+		
+		<section class="page-section squad" id="squad">
+			<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Squad</h2>
+		
+			<!-- Icon Divider -->
+			<div class="divider-custom">
+				<div class="divider-custom-line"></div>
+				<div class="divider-custom-icon">
+					<i class="fas fa-futbol"></i>
+				</div>
+				<div class="divider-custom-line"></div>
+			</div>
+			
+			
+			<div class="row">
+			  <div class="column">
+				<div class="card">
+				  <img src="img/anon.png" alt="luke" style="width:100%">
+				  <div class="container">
+					<h2>Luke</h2>
+					<p class="title">#1</p>
+					<p>Goalkeeper</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="card">
+				  <img src="img/anon.png" alt="oliver" style="width:100%">
+				  <div class="container">
+					<h2>Oliver</h2>
+					<p class="title">#5</p>
+					<p>Defense</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="card">
+				  <img src="img/anon.png" alt="louie" style="width:100%">
+				  <div class="container">
+					<h2>Louie</h2>
+					<p class="title">#8</p>
+					<p>Defense</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="card">
+				  <img src="img/anon.png" alt="frankie" style="width:100%">
+				  <div class="container">
+					<h2>Frankie</h2>
+					<p class="title">#2</p>
+					<p>Defense / Midfield</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="card">
+				  <img src="img/anon.png" alt="ryan" style="width:100%">
+				  <div class="container">
+					<h2>Ryan</h2>
+					<p class="title">#23</p>
+					<p>Midfield</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="card">
+				  <img src="img/anon.png" alt="roman" style="width:100%">
+				  <div class="container">
+					<h2>Roman</h2>
+					<p class="title">#9</p>
+					<p>Midfield</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="card">
+				  <img src="img/anon.png" alt="harry" style="width:100%">
+				  <div class="container">
+					<h2>Harry</h2>
+					<p class="title">#7</p>
+					<p>Midfield</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="card">
+				  <img src="img/anon.png" alt="harrison" style="width:100%">
+				  <div class="container">
+					<h2>Harrison</h2>
+					<p class="title">#6</p>
+					<p>Midfield</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="card">
+				  <img src="img/anon.png" alt="mikel" style="width:100%">
+				  <div class="container">
+					<h2>Mikel</h2>
+					<p class="title">#10</p>
+					<p>Attack</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
+			
+			
+			
+		</section>
 		
 <!-- Photos Section -->
 		<section class="page-section gallery" id="gallery">
@@ -433,12 +633,10 @@
 					  width: 100%;
 					  height: auto;
 					}
-
 					div.desc {
 					  padding: 15px;
 					  text-align: center;
 					}
-					
 				   </style>
 
 			  <!-- gallery Section Heading -->
@@ -543,6 +741,9 @@
 			  <h4 class="text-uppercase mb-4">Around the Web</h4>
 			  <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/HempsteadValleyFootballClub">
 				<i class="fab fa-fw fa-facebook-f"></i>
+			  </a>
+			  <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/hempsteadvalleyfc">
+				<i class="fab fa-fw fa-instagram"></i>
 			  </a>
 			  <a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/hvfc92">
 				<i class="fab fa-fw fa-twitter"></i>
