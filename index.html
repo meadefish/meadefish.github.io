@@ -76,6 +76,7 @@
 	  </header>
 
 	  <!-- Portfolio Section -->
+	  <!-- Portfolio Section -->
 	  <section class="page-section portfolio" id="matches">
 		<div class="container">
 		
@@ -92,7 +93,7 @@
 			<div class="divider-custom-line"></div>
 		  </div>
 
-			<head>
+        <head>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 			<script>
 				$(document).ready(function(){
@@ -110,6 +111,17 @@
 				  $("#myInput2").on("keyup", function() {
 					var value = $(this).val().toLowerCase();
 					$("#myTable2 tr").filter(function() {
+					  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+					});
+				  });
+				});
+			</script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script>
+				$(document).ready(function(){
+				  $("#myInput3").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#myTable3 tr").filter(function() {
 					  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 					});
 				  });
@@ -162,6 +174,7 @@
 			<div class="tab">
 			  <button class="tablinks" onclick="openCity(event, '1920')">2022/2023</button>
 			  <button class="tablinks" onclick="openCity(event, '2021')">2023/2024</button>
+              <button class="tablinks" onclick="openCity(event, 'stats')">Stats</button>
 			</div>
 
 			<!-- Tab content -->
@@ -373,54 +386,130 @@
 					  </tbody>
 					</table>
 					</div>
-			
-			  
-			  
-			  
 			</div>
 
 			<div id="2021" class="tabcontent">
-			  <h3>2023/2024 Season</h3>
-			  
-
-					<h3>Search competition or team here...</h3>
-					<input id="myInput2" type="text" placeholder="Search..">
-					<br><br>
-					<div style="height:292px;overflow-y:scroll;">
+			    <h3>2023/2024 Season</h3>
+                <h3>Search competition or team here...</h3>
+                <input id="myInput2" type="text" placeholder="Search..">
+                <br><br>
+                <div style="height:292px;overflow-y:scroll;">
 					<table>
-					  <thead>
-					  <tr>
-						<th>Comp</th>
-						<th>Home Team</th>
-						<th>Home Score</th>
-						<th>-</th>
-						<th>Away Score</th>
-						<th>Away Team</th>
-						<th>Date</th>
-						<th>Address</th>
-						<th>Goals</th>
-						<th>Man of the Match</th>
-					  </tr>
-					  </thead>
-					  <tbody id="myTable2">
-						<tr>
-							<td>League</td>
-							<td>Ebbsfleet United Red</td>
-							<td align="center">-</td>
-							<td>-</td>
-							<td align="center">-</td>
-							<td>TBC</td>
-							<td>TBC</td>
-							<td><a href="https://www.google.co.uk/maps/place/Saint+George's+Church+of+England+School/@51.4279527,0.3586859,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8b61ae318015b:0x76bc2a371af48631!8m2!3d51.4279527!4d0.3608746">St George's School, DA11 7LS</a></td>
-							<td>-</td>
-							<td>-</td>
-						  </tr>
-					  </tbody>
+                        <thead>
+                            <tr>
+                                <th>Comp</th>
+                                <th>Home Team</th>
+                                <th>Home Score</th>
+                                <th>-</th>
+                                <th>Away Score</th>
+                                <th>Away Team</th>
+                                <th>Date</th>
+                                <th>Address</th>
+                                <th>Goals</th>
+                                <th>Man of the Match</th>
+					        </tr>
+					    </thead>
+					    <tbody id="myTable2">
+						    <tr>
+                                <td>League</td>
+                                <td>Ebbsfleet United Red</td>
+                                <td align="center">-</td>
+                                <td>-</td>
+                                <td align="center">-</td>
+                                <td>TBC</td>
+                                <td>TBC</td>
+                                <td><a href="https://www.google.co.uk/maps/place/Saint+George's+Church+of+England+School/@51.4279527,0.3586859,17z/data=!3m1!4b1!4m5!3m4!1s0x47d8b61ae318015b:0x76bc2a371af48631!8m2!3d51.4279527!4d0.3608746">St George's School, DA11 7LS</a></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
 					</table>
-			</div>
-			</head>
-			<br>
-		</div>
+			    </div>
+            </div>
+
+            <div id="stats" class="tabcontent">
+                <h3>Stats (League & Cup)</h3>
+                <h3>Search for players here...</h3>
+                <input id="myInput3" type="text" placeholder="Search..">
+                <br><br>
+                <div style="height:292px;overflow-y:scroll;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Appearances</th>
+                                <th>Goals</th>
+                                <th>Man of the Match</th>
+                            </tr>
+                        </thead>
+                            <tbody id="myTable3">
+                                <tr>
+                                    <td>Mason</td>
+                                    <td>8</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Tise</td>
+                                    <td>9</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>8</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Presley</td>
+                                    <td>9</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Oliver</td>
+                                    <td>8</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Henry</td>
+                                    <td>9</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Luke</td>
+                                    <td>9</td>
+                                    <td>16</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Tolu</td>
+                                    <td>9</td>
+                                    <td>5</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Albie</td>
+                                    <td>9</td>
+                                    <td>6</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Max</td>
+                                    <td>5</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </head>
+        <br>
+        </div>
 	  </section>
 		
 		<section class="page-section squad" id="squad">
