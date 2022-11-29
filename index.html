@@ -127,6 +127,16 @@
 				  });
 				});
 			</script>
+			<script>
+				$(document).ready(function(){
+				  $("#myInput4").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#myTable4 tr").filter(function() {
+					  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+					});
+				  });
+				});
+			</script>
 			
 			<script>
 				function openCity(evt, cityName) {
@@ -174,7 +184,8 @@
 			<div class="tab">
 			  <button class="tablinks" onclick="openCity(event, '1920')">2022/2023</button>
 			  <button class="tablinks" onclick="openCity(event, '2021')">2023/2024</button>
-              <button class="tablinks" onclick="openCity(event, 'stats')">Stats</button>
+              <button class="tablinks" onclick="openCity(event, 'stats')">Player Stats</button>
+			  <button class="tablinks" onclick="openCity(event, 'team')">Team Stats</button>
 			</div>
 
 			<!-- Tab content -->
@@ -428,7 +439,7 @@
             </div>
 
             <div id="stats" class="tabcontent">
-                <h3>Stats (League & Cup)</h3>
+                <h3>Player Stats (League & Cup)</h3>
                 <h3>Search for players here...</h3>
                 <input id="myInput3" type="text" placeholder="Search..">
                 <br><br>
@@ -507,6 +518,40 @@
                     </table>
                 </div>
             </div>
+
+			<div id="team" class="tabcontent">
+			    <h3>Team Stats (League & Cup) </h3>
+                <h3>Search here...</h3>
+                <input id="myInput4" type="text" placeholder="Search..">
+                <br><br>
+                <div style="height:292px;overflow-y:scroll;">
+					<table>
+                        <thead>
+                            <tr>
+                                <th>Season</th>
+                                <th>Played</th>
+                                <th>Wins</th>
+                                <th>Draws</th>
+                                <th>Losses</th>
+                                <th>Goals Scored</th>
+                                <th>Goals Conceded</th>
+					        </tr>
+					    </thead>
+					    <tbody id="myTable4">
+						    <tr>
+                                <td>2022/2023</td>
+                                <td>9</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>33</td>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+					</table>
+			    </div>
+            </div>
+
         </head>
         <br>
         </div>
