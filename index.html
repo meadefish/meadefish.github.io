@@ -600,14 +600,14 @@
 					  <tr>
 						<td>League</td>
 						<td>Ebbsfleet United Red</td>
-						<td align="center">-</td>
+						<td align="center">2</td>
 						<td>-</td>
-						<td align="center">-</td>
+						<td align="center">0</td>
 						<td>Dynamo Youth</td>
 						<td>23/04/2023</td>
 						<td><a href="https://www.google.com/maps/place/Riverview+Junior+School/@51.4185829,0.3897997,15z/data=!4m5!3m4!1s0x0:0xa930fc68abbdfffc!8m2!3d51.4185815!4d0.3902545">Riverview School, DA12 4SD</a></td>
-						<td>-</td>
-						<td>-</td>
+						<td>Luke, Max</td>
+						<td>Tolu</td>
 					  </tr>
 					  <tr>
 						<td>Friendly</td>
@@ -617,7 +617,7 @@
 						<td align="center">-</td>
 						<td>Ebbsfleet United Red</td>
 						<td>30/04/2023</td>
-						<td><a href="">TBC</a></td>
+						<td><a href="https://www.google.com/maps/place/Farnborough+Sports+Club/@51.3592119,0.0500443,15z/data=!3m1!4b1!4m6!3m5!1s0x47d8ab38763c139b:0x1ea5c124048bc0fb!8m2!3d51.3592!4d0.0684982!16s%2Fg%2F1tfg2bry">Farnborough Sports Club, BR6 7BA</a></td>
 						<td>-</td>
 						<td>-</td>
 					  </tr>
@@ -695,62 +695,62 @@
                             <tbody id="myTable3">
                                 <tr>
                                     <td>Mason</td>
-                                    <td>17</td>
+                                    <td>18</td>
                                     <td>0</td>
                                     <td>1</td>
                                 </tr>
                                 <tr>
                                     <td>Tise</td>
-                                    <td>20</td>
+                                    <td>21</td>
                                     <td>5</td>
                                     <td>3</td>
                                 </tr>
                                 <tr>
                                     <td>Ben</td>
-                                    <td>19</td>
+                                    <td>20</td>
                                     <td>0</td>
                                     <td>2</td>
                                 </tr>
                                 <tr>
                                     <td>Presley</td>
-                                    <td>20</td>
+                                    <td>21</td>
                                     <td>2</td>
                                     <td>1</td>
                                 </tr>
                                 <tr>
                                     <td>Oliver</td>
-                                    <td>17</td>
+                                    <td>18</td>
                                     <td>1</td>
                                     <td>3</td>
                                 </tr>
                                 <tr>
                                     <td>Henry</td>
-                                    <td>20</td>
+                                    <td>21</td>
                                     <td>1</td>
                                     <td>0</td>
                                 </tr>
                                 <tr>
                                     <td>Luke</td>
-                                    <td>20</td>
-                                    <td>23</td>
+                                    <td>21</td>
+                                    <td>24</td>
                                     <td>0</td>
                                 </tr>
                                 <tr>
                                     <td>Tolu</td>
-                                    <td>20</td>
+                                    <td>21</td>
                                     <td>6</td>
-                                    <td>4</td>
+                                    <td>5</td>
                                 </tr>
                                 <tr>
                                     <td>Albie</td>
-                                    <td>20</td>
+                                    <td>21</td>
                                     <td>6</td>
                                     <td>2</td>
                                 </tr>
                                 <tr>
                                     <td>Max</td>
-                                    <td>14</td>
-                                    <td>5</td>
+                                    <td>15</td>
+                                    <td>6</td>
                                     <td>1</td>
                                 </tr>
                             </tbody>
@@ -780,13 +780,13 @@
 					    <tbody id="myTable4">
 						    <tr>
                                 <td>2022/2023</td>
-                                <td>20</td>
-                                <td>8</td>
+                                <td>21</td>
+                                <td>9</td>
                                 <td>3</td>
                                 <td>9</td>
-                                <td>49</td>
+                                <td>51</td>
                                 <td>41</td>
-								<td>+8</td>
+								<td>+10</td>
                             </tr>
                         </tbody>
 					</table>
@@ -921,11 +921,11 @@
 			
 				  <style>
 					div.gallery {
-					  margin: 5px;
+					  margin: 10px;
 					  border: 1px solid #ccc;
-					  float: left;
-					  width: 250px;
-					  align: centre;
+					  width: 150px !important;
+					  align-items: centre;
+    				  flex: 1 1 auto;
 					}
 
 					div.gallery:hover {
@@ -939,6 +939,11 @@
 					div.desc {
 					  padding: 15px;
 					  text-align: center;
+					}
+
+					.card-deck {
+						display: flex;
+						flex-wrap: wrap;
 					}
 				   </style>
 
@@ -954,21 +959,56 @@
 				<div class="divider-custom-line"></div>
 			  </div>
 
-			  <!-- gallery Grid Items -->
+			  <!-- gallery Grid Items -->			  
 			  <div style="overflow-x:auto;">
-			  <div class="card-deck">
-				<div class="gallery">
-					<a target="_blank" href="img/squad_new.jpg">
-					<img src="img/squad_new.jpg" alt="Cinque Terre" width="600" height="400">
-					</a>
-					<div class="desc">Squad</div>
+				<div class="card-deck">
+				  <div class="gallery">
+					<div class="item" style="flex: 3;">
+					  <a target="_blank" href="img/DSC_7120-dn.jpg">
+						<img src="img/DSC_7120-dn.jpg" alt="Guard of Honour">
+					  </a>
+					  <div class="desc">Guard of Honour</div>
+					</div>
+					<div class="item" style="flex: 3;">
+						<a target="_blank" href="img/DSC_7113-dn.jpg">
+						  <img src="img/DSC_7113-dn.jpg" alt="Guard of Honour">
+						</a>
+						<div class="desc">Guard of Honour</div>
+					  </div>
+					<div class="item" style="flex: 3;">
+						<a target="_blank" href="img/DSC_7138-dn.jpg">
+						  <img src="img/DSC_7138-dn.jpg" alt="Guard of Honour">
+						</a>
+						<div class="desc">Guard of Honour</div>
+					  </div>
+					  <div class="item" style="flex: 3;">
+						<a target="_blank" href="img/DSC_7137-dn.jpg">
+						  <img src="img/DSC_7137-dn.jpg" alt="Guard of Honour">
+						</a>
+						<div class="desc">Guard of Honour</div>
+					  </div>
+					  <div class="item" style="flex: 3;">
+						<a target="_blank" href="img/DSC_7130-dn.jpg">
+						  <img src="img/DSC_7130-dn.jpg" alt="Guard of Honour">
+						</a>
+						<div class="desc">Guard of Honour</div>
+					  </div>
+					  <div class="item" style="flex: 3;">
+						<a target="_blank" href="img/DSC_7159-dn.jpg">
+						  <img src="img/DSC_7159-dn.jpg" alt="Guard of Honour">
+						</a>
+						<div class="desc">Guard of Honour</div>
+					  </div>
+					  <div class="item" style="flex: 3;">
+						<a target="_blank" href="img/squad_new.jpg">
+						  <img src="img/squad_new.jpg" alt="Squad">
+						</a>
+						<div class="desc">Squad</div>
+					  </div>
+				  </div>
 				</div>
-				
-				</div>
-				</div>
+			  </div>
 			</div>		
-			
-			
 	  </section>
 	  
 	  <!-- About Section -->
