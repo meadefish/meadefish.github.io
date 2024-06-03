@@ -69,7 +69,7 @@
 		  </div>
 
 		  <!-- Masthead Subheading -->
-		  <p class="masthead-subheading font-weight-light mb-0">Welcome to the home of Ebbsfleet United Reds. We are currently playing in the Selkent Youth A League at Under 11's.</p>
+		  <p class="masthead-subheading font-weight-light mb-0">Welcome to the home of Ebbsfleet United Reds. We are currently playing in the Selkent Youth A League at Under 12's.</p>
 		  <p class="masthead-subheading font-weight-light mb-0">Below you can see our latest results, upcoming fixtures, as well as a gallery of images from recent games!</p>
 
 		</div>
@@ -137,6 +137,36 @@
 				  });
 				});
 			</script>
+			<script>
+				$(document).ready(function(){
+				  $("#myInput5").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#myTable5 tr").filter(function() {
+					  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+					});
+				  });
+				});
+			</script>
+			<script>
+				$(document).ready(function(){
+				  $("#myInput6").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#myTable6 tr").filter(function() {
+					  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+					});
+				  });
+				});
+			</script>
+			<script>
+				$(document).ready(function(){
+				  $("#myInput7").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#myTable7 tr").filter(function() {
+					  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+					});
+				  });
+				});
+			</script>
 			
 			<script>
 				function openCity(evt, cityName) {
@@ -182,11 +212,13 @@
 			
 			<!-- Tab links -->
 			<div class="tab">
-			  <button class="tablinks" onclick="openCity(event, '1920')">2022/2023</button>
-			  <button class="tablinks" onclick="openCity(event, 'stats')">Player Stats (22/23)</button>
-			  <button class="tablinks" onclick="openCity(event, '2021')">2023/2024</button>
-			  <button class="tablinks" onclick="openCity(event, 'stats2')">Player Stats (23/24)</button>
-			  <button class="tablinks" onclick="openCity(event, 'team')">Team Stats</button>
+				<button class="tablinks" onclick="openCity(event, 'team')">Team Stats</button>
+				<button class="tablinks" onclick="openCity(event, '2024')">2024/2025</button>
+				<button class="tablinks" onclick="openCity(event, 'stats3')">Player Stats (24/25)</button>
+				<button class="tablinks" onclick="openCity(event, '2021')">2023/2024</button>
+				<button class="tablinks" onclick="openCity(event, 'stats2')">Player Stats (23/24)</button>
+				<button class="tablinks" onclick="openCity(event, '1920')">2022/2023</button>
+				<button class="tablinks" onclick="openCity(event, 'stats')">Player Stats (22/23)</button>
 			</div>
 
 			<!-- Tab content -->
@@ -1048,39 +1080,67 @@
 							<tr>
                                 <td><a href="">Selkent Cup One (Final)</a></td>
                                 <td>Ebbsfleet United Red</td>
-                                <td align="center">-</td>
+                                <td align="center">1</td>
                                 <td>-</td>
-                                <td align="center">-</td>
+                                <td align="center">2</td>
                                 <td>Russellers Blues</td>
                                 <td>28/04/24</td>
                                 <td><a href="https://www.google.com/maps/place/Marathon+Football+Grounds/@51.4724836,0.0406208,15z/data=!4m6!3m5!1s0x47d8a9aca194c7e5:0x7b10c7bd94bad6b2!8m2!3d51.4724836!4d0.0406208!16s%2Fg%2F11bymsydyw?entry=ttu">Marathon Grounds, SE3 8DW</a></td>
-                                <td>-</td>
-                                <td>-</td>
-                            </tr>
-							<tr>
-                                <td><a href="">U11 Shield</a></td>
-                                <td>Ebbsfleet United Red</td>
-                                <td align="center">-</td>
-                                <td>-</td>
-                                <td align="center">-</td>
-                                <td>Dulwich Village Black</td>
-                                <td>05/05/24</td>
-                                <td><a href="https://www.google.com/maps/place/Nelson+Rd,+Northfleet,+Gravesend+DA11+7EE/@51.4309862,0.3523148,17.46z/data=!4m6!3m5!1s0x47d8b60a89a48f9b:0x63592fad14764691!8m2!3d51.4313476!4d0.3549616!16s%2Fg%2F1vysvt3b?entry=ttu">Kedbull Leisure, DA11 7EE</a></td>
-                                <td>-</td>
+                                <td>Luke</td>
                                 <td>-</td>
                             </tr>
 							<tr>
-                                <td><a href="">League</a></td>
+                                <td><a href="">Friendly</a></td>
                                 <td>Dartford White</td>
-                                <td align="center">-</td>
+                                <td align="center">1</td>
                                 <td>-</td>
-                                <td align="center">-</td>
+                                <td align="center">3</td>
                                 <td>Ebbsfleet United Red</td>
                                 <td>19/05/24</td>
                                 <td><a href="">TBC</a></td>
                                 <td>-</td>
                                 <td>-</td>
                             </tr>
+                        </tbody>
+					</table>
+			    </div>
+            </div>
+
+			<div id="2024" class="tabcontent">
+			    <h3>2024/2025 Season</h3>
+                <h3>Search competition or team here...</h3>
+                <input id="myInput6" type="text" placeholder="Search..">
+                <br><br>
+                <div style="height:292px;overflow-y:scroll;">
+					<table>
+                        <thead>
+                            <tr>
+                                <th>Comp</th>
+                                <th>Home Team</th>
+                                <th>Home Score</th>
+                                <th>-</th>
+                                <th>Away Score</th>
+                                <th>Away Team</th>
+                                <th>Date</th>
+                                <th>Address</th>
+                                <th>Goals</th>
+                                <th>Man of the Match</th>
+					        </tr>
+					    </thead>
+					    <tbody id="myTable6">
+						    <tr>
+                                <td>Friendly</td>
+                                <td>Ebbsfleet United Red</td>
+                                <td align="center">-</td>
+                                <td>-</td>
+                                <td align="center">-</td>
+                                <td>-</td>
+                                <td>TBC</td>
+                                <td><a href="">TBC</a></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+							
                         </tbody>
 					</table>
 			    </div>
@@ -1170,7 +1230,7 @@
 			<div id="stats2" class="tabcontent">
                 <h3>Player Stats (League & Cup)</h3>
                 <h3>Search for players here...</h3>
-                <input id="myInput3" type="text" placeholder="Search..">
+                <input id="myInput7" type="text" placeholder="Search..">
                 <br><br>
                 <div style="height:292px;overflow-y:scroll;">
                     <table>
@@ -1182,70 +1242,70 @@
                                 <th>Man of the Match</th>
                             </tr>
                         </thead>
-                            <tbody id="myTable3">
+                            <tbody id="myTable7">
                                 <tr>
                                     <td>Mason</td>
-                                    <td>21</td>
+                                    <td>22</td>
                                     <td>0</td>
                                     <td>0</td>
                                 </tr>
 								<tr>
                                     <td>Max B</td>
-                                    <td>23</td>
+                                    <td>24</td>
                                     <td>0</td>
                                     <td>1</td>
                                 </tr>
                                 <tr>
                                     <td>Tise</td>
-                                    <td>23</td>
+                                    <td>24</td>
                                     <td>4</td>
                                     <td>2</td>
                                 </tr>
                                 <tr>
                                     <td>Ben</td>
-                                    <td>25</td>
+                                    <td>26</td>
                                     <td>1</td>
                                     <td>2</td>
                                 </tr>
                                 <tr>
                                     <td>Presley</td>
-                                    <td>24</td>
+                                    <td>25</td>
                                     <td>1</td>
                                     <td>1</td>
                                 </tr>
                                 <tr>
                                     <td>Oliver</td>
-                                    <td>21</td>
+                                    <td>22</td>
                                     <td>0</td>
                                     <td>2</td>
                                 </tr>
                                 <tr>
                                     <td>Henry</td>
-                                    <td>24</td>
+                                    <td>25</td>
                                     <td>6</td>
                                     <td>2</td>
                                 </tr>
                                 <tr>
                                     <td>Luke</td>
-                                    <td>19</td>
-                                    <td>37</td>
+                                    <td>20</td>
+                                    <td>38</td>
                                     <td>3</td>
                                 </tr>
 								<tr>
                                     <td>Louie</td>
-                                    <td>20</td>
+                                    <td>21</td>
                                     <td>6</td>
                                     <td>3</td>
                                 </tr>
                                 <tr>
                                     <td>Tolu</td>
-                                    <td>24</td>
+                                    <td>25</td>
                                     <td>6</td>
                                     <td>3</td>
                                 </tr>
                                 <tr>
                                     <td>Albie</td>
-                                    <td>23</td>
+                                    <td>24</td>
                                     <td>16</td>
                                     <td>2</td>
                                 </tr>
@@ -1257,7 +1317,7 @@
                                 </tr>
 								<tr>
                                     <td>Jack</td>
-                                    <td>25</td>
+                                    <td>26</td>
                                     <td>0</td>
                                     <td>1</td>
                                 </tr>
@@ -1265,6 +1325,93 @@
                                     <td>Max E</td>
                                     <td>15</td>
                                     <td>10</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+
+			<div id="stats3" class="tabcontent">
+                <h3>Player Stats (League & Cup)</h3>
+                <h3>Search for players here...</h3>
+                <input id="myInput5" type="text" placeholder="Search..">
+                <br><br>
+                <div style="height:292px;overflow-y:scroll;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Appearances</th>
+                                <th>Goals</th>
+                                <th>Man of the Match</th>
+                            </tr>
+                        </thead>
+                            <tbody id="myTable5">
+                                <tr>
+                                    <td>Seve</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Tise</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ben</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Presley</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Oliver</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Henry</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Tolu</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Albie</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+								<tr>
+                                    <td>Jack</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+								<tr>
+                                    <td>Ted</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+								<tr>
+                                    <td>Tom</td>
+                                    <td>0</td>
+                                    <td>0</td>
                                     <td>0</td>
                                 </tr>
                             </tbody>
@@ -1304,13 +1451,23 @@
                             </tr>
 							<tr>
                                 <td>2023/2024</td>
-                                <td>25</td>
+                                <td>26</td>
                                 <td>12</td>
                                 <td>3</td>
-                                <td>10</td>
-                                <td>89</td>
-                                <td>50</td>
-								<td>+39</td>
+                                <td>11</td>
+                                <td>90</td>
+                                <td>52</td>
+								<td>+38</td>
+                            </tr>
+							<tr>
+                                <td>2024/2025</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+								<td>0</td>
                             </tr>
                         </tbody>
 					</table>
@@ -1338,19 +1495,9 @@
 			<div class="row">
 			  <div class="column">
 				<div class="card">
-				  <img src="img/gallery/MAS.jpg" alt="mason" style="width:100%">
+				  <img src="img/gallery/anon.png" alt="seve" style="width:100%">
 				  <div class="container">
-					<h2>Mason</h2>
-					<p class="title">#1</p>
-					<p>Goalkeeper</p>
-				  </div>
-				</div>
-			  </div>
-			  <div class="column">
-				<div class="card">
-				  <img src="img/gallery/MAX.jpg" alt="max" style="width:100%">
-				  <div class="container">
-					<h2>Max B</h2>
+					<h2>Seve</h2>
 					<p class="title">#1</p>
 					<p>Goalkeeper</p>
 				  </div>
@@ -1378,21 +1525,41 @@
 			  </div>
 			  <div class="column">
 				<div class="card">
-				  <img src="img/gallery/PRES.jpg" alt="presley" style="width:100%">
+				  <img src="img/gallery/BEN.jpg" alt="ben" style="width:100%">
 				  <div class="container">
-					<h2>Presley</h2>
-					<p class="title">#4</p>
+					<h2>Ben</h2>
+					<p class="title">#3</p>
 					<p>Defence</p>
 				  </div>
 				</div>
 			  </div>
 			  <div class="column">
 				<div class="card">
-				  <img src="img/gallery/BEN.jpg" alt="ben" style="width:100%">
+				  <img src="img/gallery/anon.png" alt="ted" style="width:100%">
 				  <div class="container">
-					<h2>Ben</h2>
-					<p class="title">#3</p>
+					<h2>Ted</h2>
+					<p class="title">#99</p>
 					<p>Defence / Midfield</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="card">
+				  <img src="img/gallery/PRES.jpg" alt="presley" style="width:100%">
+				  <div class="container">
+					<h2>Presley</h2>
+					<p class="title">#4</p>
+					<p>Midfield</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="column">
+				<div class="card">
+				  <img src="img/gallery/anon.png" alt="tom" style="width:100%">
+				  <div class="container">
+					<h2>Tom</h2>
+					<p class="title">#99</p>
+					<p>Midfield</p>
 				  </div>
 				</div>
 			  </div>
@@ -1402,7 +1569,7 @@
 				  <div class="container">
 					<h2>Tise</h2>
 					<p class="title">#2</p>
-					<p>Defence / Midfield</p>
+					<p>Midfield</p>
 				  </div>
 				</div>
 			  </div>
@@ -1411,16 +1578,6 @@
 				  <img src="img/gallery/TOL.jpg" alt="tolu" style="width:100%">
 				  <div class="container">
 					<h2>Tolu</h2>
-					<p class="title">#8</p>
-					<p>Midfield</p>
-				  </div>
-				</div>
-			  </div>
-			  <div class="column">
-				<div class="card">
-				  <img src="img/gallery/anon.png" alt="tolu" style="width:100%">
-				  <div class="container">
-					<h2>Louie</h2>
 					<p class="title">#8</p>
 					<p>Midfield</p>
 				  </div>
@@ -1443,16 +1600,6 @@
 					<h2>Albie</h2>
 					<p class="title">#9</p>
 					<p>Midfield</p>
-				  </div>
-				</div>
-			  </div>
-			  <div class="column">
-				<div class="card">
-				  <img src="img/gallery/LUK.jpg" alt="luke" style="width:100%">
-				  <div class="container">
-					<h2>Luke</h2>
-					<p class="title">#7</p>
-					<p>Attack</p>
 				  </div>
 				</div>
 			  </div>
@@ -1612,7 +1759,7 @@
 			  <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/EbbsfleetUnited">
 				<i class="fab fa-fw fa-facebook-f"></i>
 			  </a>
-			  <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/ebbsfleetunited_u11reds">
+			  <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/ebbsfleetreds">
 				<i class="fab fa-fw fa-instagram"></i>
 			  </a>
 			  <a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/EUFCofficial">
